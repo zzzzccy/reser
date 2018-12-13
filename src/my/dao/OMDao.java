@@ -44,6 +44,7 @@ public class OMDao {
  		rs.next();
  		count = rs.getInt(1);
 		
+ 		JDUtil.closeConn(conn);
 		return count;
 	}
 	
@@ -65,7 +66,8 @@ public class OMDao {
 		} catch (Exception e) {
 			flag = 0;
 		}
-		conn.close();
+		
+		JDUtil.closeConn(conn);
 		return flag;
 		
 	}

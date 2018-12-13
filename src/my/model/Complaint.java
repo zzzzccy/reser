@@ -6,6 +6,8 @@ public class Complaint {
 	private int udid;//反馈/投诉人id
 	private int cudid;//反馈/投诉对象id
 	private String msg;//反馈/投诉信息
+	private String status;//状态：1-待审核、2-已通过、3-不通过
+	
 	
 	public int getCid() {
 		return cid;
@@ -30,6 +32,12 @@ public class Complaint {
 	}
 	public void setMsg(String msg) {
 		this.msg = msg;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	
 }
